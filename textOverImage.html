@@ -1,0 +1,68 @@
+<html>
+
+<head>
+<title>textOverImage</title>
+</head>
+
+<style type="text/css">
+
+.textOverImage{
+position:relative;
+width:300px;
+height:300px;
+float:left;
+margin:4px;
+background-size:100%;
+background-position:center;
+transition:0.5s;
+}
+
+.textOverImage:hover{
+background-size:150%;
+}
+
+.textOverImage:after{
+position:absolute;
+top:50%;
+bottom:0px;
+left:0px;
+right:0px;
+white-space:pre-wrap;
+overflow:hidden;
+background-color:rgba(0, 0, 0, 0.3);
+padding:8px;
+color:#fff;
+opacity:0;
+content:attr(data-text);
+transition:0.5s;
+}
+
+.textOverImage:hover:after{
+opacity:1;
+top:0;
+padding:8px;
+background-color:rgba(0, 0, 0, 0.6);
+}
+
+.textOverImage:first-line{
+color:#fff;
+font-weight:bold;
+font-size:10.5em;
+}
+
+
+</style>
+<body>
+
+<div class="textOverImage" style="background:linear-gradient(to top, blue 0%, yellow 100%);" data-text="Baholo-Brooklyn 
+iunfuewbuewf ewfuwfuiw fnewiufiwn">
+</div>
+
+<div class="textOverImage" style="background:linear-gradient(to top, orange 0%, purple 100%);" data-text="Baholo
+-Brooklyn fbuewbu wbewewbf wnpfmjewojoi wuieofewmfo">
+</div>
+
+</body>
+
+
+</html>
